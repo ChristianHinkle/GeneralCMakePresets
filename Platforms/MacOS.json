@@ -18,66 +18,66 @@
             "name": "macos-debug-default",
             "displayName": "macOS Debug (Default)",
             "inherits": [
-                "common-base",
+                "debug-base",
                 "macos-base",
-                "debug-base"
+                "common-base"
             ]
         },
         {
             "name": "macos-release-default",
             "displayName": "macOS Release (Default)",
             "inherits": [
-                "common-base",
+                "release-base",
                 "macos-base",
-                "release-base"
+                "common-base"
             ]
         },
         {
             "name": "macos-debug-ninja",
             "displayName": "macOS Debug (Ninja)",
             "inherits": [
-                "macos-debug-default",
-                "ninja-base"
+                "ninja-base",
+                "macos-debug-default"
             ]
         },
         {
             "name": "macos-release-ninja",
             "displayName": "macOS Release (Ninja)",
             "inherits": [
-                "macos-release-default",
-                "ninja-base"
+                "ninja-base",
+                "macos-release-default"
             ]
         },
         {
             "name": "macos-debug-xcode",
             "displayName": "macOS Debug (Xcode)",
             "inherits": [
-                "macos-debug-default",
-                "xcode-base"
+                "xcode-base",
+                "macos-debug-default"
             ]
         },
         {
             "name": "macos-release-xcode",
             "displayName": "macOS Release (Xcode)",
             "inherits": [
-                "macos-release-default",
-                "xcode-base"
+                "xcode-base",
+                "macos-release-default"
             ]
         },
         {
             "name": "macos-debug-unix-makefiles",
             "displayName": "macOS Debug (Unix Makefiles)",
             "inherits": [
-                "macos-debug-default",
-                "unix-makefiles-base"
+                "unix-makefiles-base",
+                "macos-debug-default"
             ]
         },
         {
             "name": "macos-release-unix-makefiles",
             "displayName": "macOS Release (Unix Makefiles)",
             "inherits": [
-                "macos-release-default",
-                "unix-makefiles-base"
+                "unix-makefiles-base",
+                "macos-release-default"
             ]
         }
     ],

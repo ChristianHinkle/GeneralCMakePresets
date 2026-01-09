@@ -18,32 +18,32 @@
             "name": "win64-debug-ninja",
             "displayName": "Windows x64 Debug (Ninja)",
             "inherits": [
-                "win-debug-ninja",
-                "x64-ninja-base"
+                "x64-ninja-base",
+                "win-debug-ninja"
             ]
         },
         {
             "name": "win64-release-ninja",
             "displayName": "Windows x64 Release (Ninja)",
             "inherits": [
-                "win-release-ninja",
-                "x64-ninja-base"
+                "x64-ninja-base",
+                "win-release-ninja"
             ]
         },
         {
             "name": "win64-debug-vs",
             "displayName": "Windows x64 Debug (Visual Studio)",
             "inherits": [
-                "win-debug-vs",
-                "x64-win-vs-base"
+                "x64-win-vs-base",
+                "win-debug-vs"
             ]
         },
         {
             "name": "win64-release-vs",
             "displayName": "Windows x64 Release (Visual Studio)",
             "inherits": [
-                "win-release-vs",
-                "x64-win-vs-base"
+                "x64-win-vs-base",
+                "win-release-vs"
             ]
         }
     ]

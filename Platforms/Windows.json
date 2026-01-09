@@ -20,50 +20,50 @@
             "name": "win-debug-default",
             "displayName": "Windows Debug (Default)",
             "inherits": [
-                "common-base",
+                "debug-base",
                 "win-base",
-                "debug-base"
+                "common-base"
             ]
         },
         {
             "name": "win-release-default",
             "displayName": "Windows Release (Default)",
             "inherits": [
-                "common-base",
+                "release-base",
                 "win-base",
-                "release-base"
+                "common-base"
             ]
         },
         {
             "name": "win-debug-ninja",
             "displayName": "Windows Debug (Ninja)",
             "inherits": [
-                "win-debug-default",
-                "ninja-base"
+                "ninja-base",
+                "win-debug-default"
             ]
         },
         {
             "name": "win-release-ninja",
             "displayName": "Windows Release (Ninja)",
             "inherits": [
-                "win-release-default",
-                "ninja-base"
+                "ninja-base",
+                "win-release-default"
             ]
         },
         {
             "name": "win-debug-vs",
             "displayName": "Windows Debug (Visual Studio)",
             "inherits": [
-                "win-debug-default",
-                "vs-base"
+                "vs-base",
+                "win-debug-default"
             ]
         },
         {
             "name": "win-release-vs",
             "displayName": "Windows Release (Visual Studio)",
             "inherits": [
-                "win-release-default",
-                "vs-base"
+                "vs-base",
+                "win-release-default"
             ]
         }
     ],
