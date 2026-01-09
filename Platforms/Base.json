@@ -6,7 +6,12 @@
         "patch": 0
     },
     "$comment": [
-        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle.",
+        "Note: We abbreviate \"windows\" to \"win\" to help alleviate any filesystem pathname limit errors."
+    ],
+    "include": [
+        "${sourceDir}/GeneralCMakePresets/Platforms/BaseDefaults.json",
+        "${sourceDir}/GeneralCMakePresetsOverrides/Platforms/Base.json"
     ],
     "configurePresets": [
         {
@@ -17,8 +22,10 @@
                 "lhs": "${hostSystemName}",
                 "rhs": "Windows"
             },
-            "$comment": [
-                "Note: We abbreviate \"windows\" to \"win\" to help alleviate any filesystem pathname limit errors."
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"win-overrides-base\" preset.",
+            "inherits": [
+                "win-overrides-base",
+                "win-defaults-base"
             ]
         },
         {
@@ -29,11 +36,11 @@
                 "lhs": "${hostSystemName}",
                 "rhs": "Linux"
             },
-            "vendor": {
-                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
-                    "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
-                }
-            }
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"linux-overrides-base\" preset.",
+            "inherits": [
+                "linux-overrides-base",
+                "linux-defaults-base"
+            ]
         },
         {
             "name": "macos-base",
@@ -43,11 +50,11 @@
                 "lhs": "${hostSystemName}",
                 "rhs": "Darwin"
             },
-            "vendor": {
-                "microsoft.com/VisualStudioRemoteSettings/CMake/1.0": {
-                    "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"
-                }
-            }
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"macos-overrides-base\" preset.",
+            "inherits": [
+                "macos-overrides-base",
+                "macos-defaults-base"
+            ]
         }
     ]
 }
