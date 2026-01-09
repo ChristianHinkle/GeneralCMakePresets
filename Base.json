@@ -10,7 +10,7 @@
     ],
     "configurePresets": [
         {
-            "name": "base",
+            "name": "common-base",
             "hidden": true,
             "binaryDir": "${sourceDir}/out/build/${presetName}",
             "installDir": "${sourceDir}/out/install/${presetName}"

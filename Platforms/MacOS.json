@@ -18,7 +18,7 @@
             "name": "macos-debug-default",
             "displayName": "macOS Debug (Default)",
             "inherits": [
-                "base",
+                "common-base",
                 "macos-base",
                 "debug-base"
             ]
@@ -27,7 +27,7 @@
             "name": "macos-release-default",
             "displayName": "macOS Release (Default)",
             "inherits": [
-                "base",
+                "common-base",
                 "macos-base",
                 "release-base"
             ]

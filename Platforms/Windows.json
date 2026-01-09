@@ -20,7 +20,7 @@
             "name": "win-debug-default",
             "displayName": "Windows Debug (Default)",
             "inherits": [
-                "base",
+                "common-base",
                 "win-base",
                 "debug-base"
             ]
@@ -29,7 +29,7 @@
             "name": "win-release-default",
             "displayName": "Windows Release (Default)",
             "inherits": [
-                "base",
+                "common-base",
                 "win-base",
                 "release-base"
             ]
