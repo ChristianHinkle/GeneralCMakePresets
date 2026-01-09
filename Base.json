@@ -6,40 +6,61 @@
         "patch": 0
     },
     "$comment": [
-        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle."
+        "Copyright (c) 2023-2025 Christian Hinkle, Brian Hinkle.",
+        "Note: The \"defaults\" presets provide some convenient default values which may be overriden by the equivalent \"overrides\" versions of those presets.",
+        "Note: We make sure that the \"defaults\" preset has less priority than the \"overrides\" preset in our \"inherits\" lists."
+    ],
+    "include": [
+        "${sourceDir}/GeneralCMakePresets/BaseDefaults.json",
+        "${sourceDir}/GeneralCMakePresetsOverrides/Base.json"
     ],
     "configurePresets": [
         {
             "name": "common-base",
             "hidden": true,
-            "binaryDir": "${sourceDir}/out/build/${presetName}",
-            "installDir": "${sourceDir}/out/install/${presetName}"
+            "description": "A base preset which is inherited by all visible presets. Note: You may inject and/or override any of our default values via the externally defined \"common-overrides-base\" preset.",
+            "inherits": [
+                "common-overrides-base",
+                "common-defaults-base"
+            ]
         },
         {
             "name": "debug-base",
             "hidden": true,
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug"
-            }
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"debug-overrides-base\" preset.",
+            "inherits": [
+                "debug-overrides-base",
+                "debug-defaults-base"
+            ]
         },
         {
             "name": "release-base",
             "hidden": true,
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
-            }
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"release-overrides-base\" preset.",
+            "inherits": [
+                "release-overrides-base",
+                "release-defaults-base"
+            ]
         }
     ],
     "testPresets": [
         {
             "name": "debug-base",
             "hidden": true,
-            "configuration": "Debug"
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"debug-overrides-base\" preset.",
+            "inherits": [
+                "debug-overrides-base",
+                "debug-defaults-base"
+            ]
         },
         {
             "name": "release-base",
             "hidden": true,
-            "configuration": "Release"
+            "description": "Note: You may inject and/or override any of our default values via the externally defined \"release-overrides-base\" preset.",
+            "inherits": [
+                "release-overrides-base",
+                "release-defaults-base"
+            ]
         }
     ]
 }
