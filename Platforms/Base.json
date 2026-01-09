@@ -15,15 +15,38 @@
     ],
     "configurePresets": [
         {
-            "name": "win-base",
+            "name": "condition-host-win-base",
             "hidden": true,
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",
                 "rhs": "Windows"
-            },
+            }
+        },
+        {
+            "name": "condition-host-linux-base",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Linux"
+            }
+        },
+        {
+            "name": "condition-host-macos-base",
+            "hidden": true,
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            }
+        },
+        {
+            "name": "win-base",
+            "hidden": true,
             "description": "Note: You may inject and/or override any of our default values via the externally defined \"win-overrides-base\" preset.",
             "inherits": [
+                "condition-host-win-base",
                 "win-overrides-base",
                 "win-defaults-base"
             ]
@@ -31,13 +54,9 @@
         {
             "name": "linux-base",
             "hidden": true,
-            "condition": {
-                "type": "equals",
-                "lhs": "${hostSystemName}",
-                "rhs": "Linux"
-            },
             "description": "Note: You may inject and/or override any of our default values via the externally defined \"linux-overrides-base\" preset.",
             "inherits": [
+                "condition-host-linux-base",
                 "linux-overrides-base",
                 "linux-defaults-base"
             ]
@@ -45,13 +64,9 @@
         {
             "name": "macos-base",
             "hidden": true,
-            "condition": {
-                "type": "equals",
-                "lhs": "${hostSystemName}",
-                "rhs": "Darwin"
-            },
             "description": "Note: You may inject and/or override any of our default values via the externally defined \"macos-overrides-base\" preset.",
             "inherits": [
+                "condition-host-macos-base",
                 "macos-overrides-base",
                 "macos-defaults-base"
             ]
