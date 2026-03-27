@@ -1,1 +1,1 @@
-# GeneralCMakePresets
+# CMakePresets_General
